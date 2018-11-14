@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" type="text/css" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
+      <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+      <title>E-Commerce website SRS</title>
+   </head>
+   <body>
+      <h1>Software Requirements Specification(SRS)</h1>
+       <h2>For E-Commerce Website</h2>
+
+
+      <!-- Section 0 starts here.-->
+      <div class="container">
+         <h3>0. Welcome to Software Requirements Specification</h3>
+         <button class="accordion">0.1 Group Number and Group Members </button>
+         <div class="panel">
+            <p>This is Group-1 and the group members name are given below with their id.</p>
+            <table class="table">
+              <tr>
+                <th>Name</th>
+                <th>ID</th>
+              </tr>
+              <tr>
+                <td>Polash Chakrabarty</td>
+                <td>1520579042</td>
+              </tr>
+              <tr>
+                <td>Tasmia Rahman Shahidi</td>
+                <td>1521367642</td>
+              </tr>
+              <tr>
+                <td>Safin Mahmud</td>
+                <td>1510903642</td>
+              </tr>
+              <tr>
+                <td>Jannatun Nur-E Rukshana</td>
+                <td>1511767642</td>
+              </tr>
+              <tr>
+                <td>Muntaha Kabir</td>
+                <td>1430243642</td>
+              </tr>
+              <tr>
+                <td>Syeda Anika Rehenuma</td>
+                <td>1120630042</td>
+              </tr>
+              <tr>
+                <td>Nazmus Shakib</td>
+                <td>1511336042</td>
+              </tr>
+            </table>
+         </div>
+         <button class="accordion">0.2 Table of Content </button>
+         <div class="panel">
+            <ol>
+              <li>Introduction</li>
+               <ul>
+                <li>1.1 Purpose</li>
+                <li>1.2 Document Conventions</li>
+                <li>1.3 Intended Audience and Reading Suggestions</li>
+                <li>1.4 Project Scope</li>
+                <li>1.5 References</li>
+                </ul>
+              <li>Overall Description</li>
+                <ul>
+                <li>2.1 Product Perspective</li>
+                <li>2.2 Product Functions</li>
+                <li>2.3 User Classes and Characteristics</li>
+                <li>2.4 Operating Environment</li>
+                <li>2.5 Design and Implementation Constraints</li>
+                <li>2.6 User Documentation</li>
+                <li>2.7 Assumptions and Dependencies</li>
+                </ul>
+              <li>External Interface Requirements</li>
+               <ul>
+                <li>3.1  User Interfaces</li>
+                <li>3.2 Hardware Interfaces</li>
+                <li>3.3 Software Interfaces</li>
+                <li>3.4 Communications Interfaces</li>
+                </ul>
+              <li>System Features</li>
+               <ul>
+                <li>4.1 System Features 1</li>
+                <li>4.2 System Features 2</li>
+                </ul>
+              <li>Other Non-functional requirements</li>
+               <ul>
+                <li>5.1 Performance Recquirments</li>
+                <li>5.2 Safety Recquirments</li>
+                <li>5.3. Security Recquirments</li>
+                <li>5.4. Software quality attributes</li>
+                <li>5.5. Business rules</li>
+                </ul>
+              <li>Appendix</li>
+               <ul>
+                <li>Appendix A: Glossary</li>
+                <li>Appendix B: Analysis Models</li>
+                </ul>      
+            </ol>
+         </div>
+       </div>
+      <!-- Section 0 ends here.-->
+      <!-- Section 1 Introduction starts here.-->
+      <div class="container">
+         <h3>1. Introduction </h3>
+         <button class="accordion">1.1 Purpose </button>
+         <div class="panel">
+            <p>This document is meant to delineate the features of eCommerce website. The purpose of the document is to collect and analyze all assorted ideas that have come
+               up to define the system, its requirements with respect to consumers. In short, the purpose of
+               this SRS document is to provide a detailed overview of our eCommerce website, its parameters
+               and goals.It is intended to provide complete solutions for vendors as well as customers through a single get way using the internet. It will enable vendors to setup online shops,customer to browse through the shop and purchase them online without having to visit the shop physically. he
+               administration module will enable a system administrator to approve and maintain various lists of shop category.
+            </p>
+         </div>
+         <button class="accordion">1.2 Document Conventions </button>
+         <div class="panel">
+            <p>We use standard HTML for writing and MockFlow for designing website wireframe.</p>
+         </div>
+         <button class="accordion">1.3 Intended Audience and Reading Suggestions </button>
+         <div class="panel">
+            <p>We are making this document by keeping in mind different types of readers. This document will be useful for different audience in various ways.</p>
+            <table class="sec_3_table">
+               <tr>
+                  <th>Audience</th>
+                  <th>Use</th>
+               </tr>
+               <tr>
+                  <td>Developers</td>
+                  <td>They will use this documents for guidance for design and implemetation phase.</td>
+               </tr>
+               <tr>
+                  <td>Administrator</td>
+                  <td>They will see the constraints all cover properly.Time and cost is within limits or not.</td>
+               </tr>
+               <tr>
+                  <td>Marketing Staff</td>
+                  <td>They can use this document to make advertisements for this web store because by reading this document they will know what the system will do? How this system is different from others.</td>
+               </tr>
+               <tr>
+                  <td>Users</td>
+                  <td>They can ensure there self by reading the SRS that their needs being met in the webstore or not.</td>
+               </tr>
+               <tr>
+                  <td>Testers</td>
+                  <td>They will test the implementation of the project according to the SRS base.</td>
+               </tr>
+               <tr>
+                  <td>Documentatio Writer</td>
+                  <td>They will use this document during the documentation of the project. It will be reallyhelpful for them.</td>
+               </tr>
+            </table>
+         </div>
+         <button class="accordion">1.4 Project Scope </button>
+         <div class="panel">
+            <ol>
+               <li>We will provide the best functionality of most popular eCommerce website like Amazon, Alibaba etc.</li>
+               <li>Our online shopping site will be available 24 hours a day and 7 days in a week. There will be partially maintenance for once a week.</li>
+               <li>Our primary objective is to facilitate the customer. Through online shopping they will save a lot of time.</li>
+               <li>Different companies (especially new one) will get chance of cheap advertising.</li>
+               <li>Companies will no need to have extra stock. They can able to make products on demand.</li>
+               <li>We will guide user to buy good products through our online help system.</li>
+               <li>We will provide normal search, voice search and multi-voice search to make the shopping more convenient for our customer.</li>
+               <li>We will provide excellent security for user details especially for credit card numbers.</li>
+               <li>We will also provide different survey, reports that show different companies performance details.</li>
+               <li>We will manage customer accounts.</li>
+               <li>We will provide easy registration via Facebook or Gmail account.</li>
+               <li>We will maintain database for different users.</li>
+            </ol>
+         </div>
+         <button class="accordion">1.5 References: </button>
+         <div class="panel">
+            <p>IEEE. IEEE Std 830-1998 IEEE Recommended Practice for Software Requirements
+               Specifications
+            </p>
+            <p>IEEE Computer Society, 1998</p>
+         </div>
+      </div>
+      <!-- Section 1 Introduction ends here.-->
+      <!-- Section 2 Overall Description starts here.-->
+      <div class="container">
+         <h3>2. Overall Description</h3>
+         <button class="accordion">2.1 Product Perspective:</button>
+         <div class="panel">
+            <p>This product is for the person who wants to buy the product easily without any difficulties. This product aimed toward the customer who don’t want to visit the shop as he might don’t get time for that or might not interested in visiting there and dealing with lot of formalities.</p>
+         </div>
+         <button class="accordion">2.2 Product Functions:</button>
+         <div class="panel">
+            <p>This should support this:-</p>
+            <img src="image/user-case diagram.jpg" class="img-thumbnail" alt="UML-diagram">
+         </div>
+         <button class="accordion">2.3 User Classes and Characteristics:</button>
+         <div class="panel">
+            <p> User should be familiar with the terms like </p>
+            <ol>
+               <li>Login</li>
+               <li>Register</li>
+               <li>Order system</li>
+               <li>Payment system</li>
+            </ol>
+         </div>
+         <button class="accordion">2.4 Operating Environment:</button>
+         <div class="panel">
+            <ol>
+               <li><b>Operating System:</b> Ubuntu, Linux Mint, Solus, Debian; Windows 7,8,10 and Android 5.0,6.0, 7.0, 7.1, 8.0, 8.1</li>
+               <li>
+                  <b>Hardware Platform:</b> Android using devices should have minimum memory requirement of 512 MB RAM
+                  <p>2.1. A microphone to enable voice input</p>
+               </li>
+            </ol>
+         </div>
+         <button class="accordion">2.5 Design and Implementation Constraints:</button>
+         <div class="panel">
+            <ul>
+               <li><b>Tools: </b>the website will contain HTML files, images, videos, flash files, databases</li>
+               <li><b>Time: </b>The time required to develop the website and the android app may exceed the estimated schedule if-</li>
+               <ul>
+                  <li># further feature requests after the initial design stages</li>
+                  <li># hardware changes that impact performance etc.</li>
+               </ul>
+               <li><b>Agreement: </b>Customers will be informed and customer agreement will be made before registration for recording the microphone while using the voice search. </li>
+            </ul>
+         </div>
+         <button class="accordion">2.6 User Documentation:</button>
+         <div class="panel">
+            <p>This is to help the users (Admin and customer level) to maintain, update and use the ecommerce website easily.</p>
+            <p><b>Admin Level:</b></p>
+            <ul>
+               <li> <b>1. Login: </b> need to type a user name and password, and then select user type “Admin” for login to the site as an admin.</li>
+               <li> <b>2. The Admin Area: </b>can make changes; add or remove new products, check for orders, and anything related to the website here.</li>
+               <li> <b>3. Logout: </b>After finishing work, can logout from the site clicking the logout button at the right upper corner.</li>
+            </ul>
+            <p><b>Customer level:</b></p>
+            <ul>
+               <li> <b>1. Registration:</b> If customer wants to buy the product then he/she must Be registered, unregistered user can’t go to the shopping cart.</li>
+               <li> <b>2. Login:</b> Customer have to login to the system by entering valid user name and password for the shopping.</li>
+               <li> <b>3. Make list:</b> Customers can make the list of required products in the search option and the searched items with all available types and details will be appeared in the screen.</li>
+               <li> <b>4. Voice search:</b> Customers can make the list by just uttering the names of the products properly.</li>
+               <li> <b>5. Changes to Cart:</b> Customer can make order or cancel order of the product from the shopping cart.</li>
+               <li> <b>6. Payment:</b> In this system we are dealing the mode of payment by Cash. We will extend this to credit card, debit card etc in the future.</li>
+               <li> <b>7.  Logout:</b> After ordering or surfing for the product customer has to logout.</li>
+               <li> <b>8. Report Generation:</b> After ordering for the product, the system will sent one copy of the bill to the customer’s Email-address and another one for the system data base.</li>
+            </ul>
+         </div>
+         <button class="accordion">2.7 Assumptions and Dependencies :</button>
+         <div class="panel">
+            <p>Working of the product needs Internet Connection.</p>
+         </div>
+      </div>
+      <!-- Section 2 Overall Description ends here.-->
+      <!-- Section 3 External Interface Requirements starts here.-->
+      <div class="container">
+         <h3>3. External Interface Requirements</h3>
+         <button class="accordion">3.1  User Interfaces</button>
+         <div class="panel">
+            <p>Various interfaces for the product could be-</p>
+            <ol>
+               <li>
+                  <p>Login Page</p>
+               </li>
+               <img src="image/Login_wireframe.png" class="img-thumbnail" alt="Login">
+               <li>
+                  <p>Registration Form</p>
+               </li>
+               <img src="image/Registration_wireframe.png" class="img-thumbnail" alt="Registration_wireframe">
+               <li>
+                  <p>There will be a screen displaying information
+                     about product that the shop having.
+                  </p>
+               </li>
+               <img src="image/shopping_list.png" class="img-thumbnail" alt="shopping_list">
+               <li>
+                  <p>If the customers select the add to cart button
+                     then another screen of shopping cart will be
+                     opened.
+                  </p>
+               </li>
+               <img src="image/Checkout.png" class="img-thumbnail" alt="Checkout">
+            </ol>
+         </div>
+         <button class="accordion">3.2 Hardware Interfaces</button>
+         <div class="panel">
+            <p>Since the application must run over the internet, all the hardware shall require to connect
+               internet will be hardware interface for the system. As for e.g. Modem, WAN – LAN, Ethernet
+               Cross-Cable.
+            </p>
+         </div>
+         <button class="accordion">3.3 Software Interfaces</button>
+         <div class="panel">
+            <p>During our system development, we have to design both static and dynamic website
+               interfaces, create website functions and a database system, edit photos and pictures, and
+               print out reports, so its has a set of software requirements.
+            </p>
+            <p>The following are needed requirements.</p>
+            <ol>
+               <li>Operating System: Windows/Linux/Mac any OS which
+                  supports networking.
+               </li>
+               <li>Python</li>
+               <li>Django Framework.</li>
+               <li>PostgreSQL</li>
+               <li>Docker</li>
+               <li>Web browser.</li>
+            </ol>
+         </div>
+         <button class="accordion">3.4 Communications Interfaces</button>
+         <div class="panel">
+            <p>The two parties should be connected by LAN or
+               WAN for the communication purpose.
+            </p>
+         </div>
+      </div>
+      <!-- Section 3 External Interface Requirements ends here.-->
+      <!-- Section 4 System Features starts here.-->
+      <div class="container">
+         <h3>4. System Features </h3>
+         <button class="accordion">4.1 System Features 1:</button>
+         <div class="panel">
+            <h3>Functional requirements-</h3>
+            <ol>
+               <li> <b>Registration:</b> For buying products, customer has to registered. Otherwise he/she is unable to buy products.</li>
+               <li> <b>Login:</b> For shopping, customers need to use a valid user userID and password for login to the system.</li>
+               <li> <b>Add to cart:</b> For buying products, customer select the products what they need and add to his/her cart for order.</li>
+               <li> <b>Voice Search:</b> For selecting items for buying, customer can search products using voice search system instead of typing.</li>
+               <li> <b>Multiple search:</b> Multiple search means, customer can search different types of products from different section at a time.</li>
+               <li> <b>Show total price of products:</b> After adding the products what customer select, the system will show a total price list of shopping which are in the cart.</li>
+               <li> <b>Add delivery charge:</b> With the total price list of the products, add the delivery charge.</li>
+               <li> <b>Payment System:</b> For payment, we initially deal with the system of cash on delivery. But later we will extend this system to credit card, debit card, bkash etc.</li>
+               <li> <b>Logout:</b> After finishing all the process step by step for shopping, customer has to logout from the system.</li>
+            </ol>
+         </div>
+         <button class="accordion">4.2 System Features 2:</button>
+         <div class="panel">
+          <p>N/A</p>
+         </div>
+      </div>
+      <!-- Section 4 System Features ends here.-->
+      <!-- Section 5 Other Nonfunctional Requirements starts here.-->
+      <div class="container">
+         <h3>5. Other Non-functional requirements-</h3>
+         <button class="accordion">5.1 Performance Recquirments:</button>
+         <div class="panel">
+            <p>To maintain an allowable maximum speed for the system for maximum usage of the customer, any number of customers can access the system at any time in that speed.</p>
+         </div>
+         <button class="accordion">5.2 Safety Recquirments:</button>
+         <div class="panel">
+            <p>The application will not affect data stored outside of its server nor will it affect any other web applications. It cannot cause any damage to the phone or its internal components. The only potential safety concern associated with this application applies to virtually all handset apps. This app should not be used while operating a vehicle or in any other situation where the user's attention must be focused elsewhere. </p>
+         </div>
+         <button class="accordion">5.3. Security Recquirments:</button>
+         <div class="panel">
+            <p>Since this software will be hosted on erver, all the user data will be kept on the server. Product should be able to protect privacy of user data. Workspace of the user should only be
+               accessed through user own credentials and any other user should not be able to access to the user
+               private data.
+            </p>
+            <p>Since execution will also be done in the machine in the server, user should be restricted in
+               terms of user rights. User should only access to his own workspace and should not access to any
+               other workspace with the programs they run on the server. Also rights of the user should be
+               restricted so that user can not harm to system by the programs they run or by the commands they
+               run on terminal.
+            </p>
+            <p>Since all the data will be transferred on the web, system should also use an encryption and
+               decryption mechanism only intended user can decode the data and work on the data. 
+            </p>
+         </div>
+         <button class="accordion">5.4. Software quality attributes:</button>
+         <div class="panel">
+            <p>This software is easy to use for both developers and customers. Some important attributes of our software are that it is secured, usable, available, well performed. Some other attributes that we worked on are scalability, robustness, operability, maintainability.  We also worked on voice search so that illiterate people can use it. We emphasized more on simplicity rather than superiority so that common people find it easy to use. </p>
+         </div>
+         <button class="accordion">5.5. Business rules:</button>
+         <div class="panel">
+            <p>Our software will be built in such a way that it will be reliable to all. Security is our main concern so that it doesn't make any mistake and in case of an error it will have a system so that our customers can get refund. We will also ensure that our customers and salesman both can easily solve a transaction error. Our voice search system will be based on Asian accent so that common people don't find any problem to select their product. If possible we will add suggestions to the voice search. </p>
+         </div>
+       </div>
+         <!-- Section 5 Other Nonfunctional Requirements ends here.-->
+         <!-- Section Appendix starts here.-->
+         <div class="container">
+            <h3>Appendix</h3>
+            <button class="accordion">Appendix A: Glossary </button>
+            <div class="panel">
+               <table class="sec_3_table">
+                  <tr>
+                     <th>Term</th>
+                     <th>Description</th>
+                  </tr>
+                  <tr>
+                     <td>SRS</td>
+                     <td>Software Requirement Specification.</td>
+                  </tr>
+                  <tr>
+                     <td>eCommerce</td>
+                     <td>Electronic Commerce, commonly known as eCommerce or e-commerce or e-business consists of buying and selling of products or goods and services  over electronic system such as Internet and other computer networks.</td>
+                  </tr>
+                  <tr>
+                     <td>Customer</td>
+                     <td>People who will purchase from this ecommerce system.</td>
+                  </tr>
+                  <tr>
+                     <td>Administrator</td>
+                     <td>The vendor who will purchase this ecommerce website for their business and maintain the site.</td>
+                  </tr>
+                  <tr>
+                     <td>Website Wireframe</td>
+                     <td>: A visual guide that represents the frame work of a website.</td>
+                  </tr>
+                  <tr>
+                     <td>HTML</td>
+                     <td>(Hypertext Markup Language)Standard markup language for creating web pages and web applications.</td>
+                  </tr>
+                  <tr>
+                     <td>MockFlow</td>
+                     <td>A tool for designing User Interface blueprints for Websites and APPs.</td>
+                  </tr>
+                  <tr>
+                     <td>Normal search</td>
+                     <td>Typing single search items or typing item list (multiple searches at a time) for search in the search menu.</td>
+                  </tr>
+                  <tr>
+                     <td>Voice search</td>
+                     <td>Searching an item or list of item at a time by uttering the item names properly.</td>
+                  </tr>
+                  <tr>
+                     <td>Operating System</td>
+                     <td>The software program of a computer or mobile devices that manages the hardware and software of the device to run this  website.</td>
+                  </tr>
+                  <tr>
+                     <td>Hardware Platform</td>
+                     <td>The set of compatible hardware that will enable this service run on the device.</td>
+                  </tr>
+                  <tr>
+                     <td>Modem</td>
+                     <td>A network hardware device.</td>
+                  </tr>
+                  <tr>
+                     <td>WAN-LAN</td>
+                     <td>(Wide Area Network and Local Area Network) Computer networks that interconnect computers over a large area and limited area respectively.</td>
+                  </tr>
+                  <tr>
+                     <td>Ethernet Cross-Cable</td>
+                     <td>Network technology that connect computing devices together directly.</td>
+                  </tr>
+                  <tr>
+                     <td>Server</td>
+                     <td>A program that processes requests and deliver data to another electronic device (computer or mobile device) over internet or a local network.</td>
+                  </tr>
+               </table>
+            </div>
+            <button class="accordion">Appendix B: Analysis Models</button>
+            <div class="panel">
+               <p>User-Case Diagram</p>
+               <img src="image/user-case diagram.jpg" class="img-thumbnail" alt="User-Case Diagram">
+            </div>
+         </div>
+         <!-- Appendix ends here.-->
+      
+      <script>
+         var acc = document.getElementsByClassName("accordion");
+         var i;
+         
+         for (i = 0; i < acc.length; i++) {
+           acc[i].addEventListener("click", function() {
+             this.classList.toggle("active");
+             var panel = this.nextElementSibling;
+             if (panel.style.maxHeight){
+               panel.style.maxHeight = null;
+               panel.style.border = null;
+             } else {
+               panel.style.maxHeight = panel.scrollHeight + 30 + "px";
+               panel.style.border = 2 + "px solid black";
+             } 
+           });
+         }
+      </script>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS 
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+   </body>
+</html>

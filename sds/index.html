@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" type="text/css" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
+      <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+      <title>Software Design Specification</title>
+   </head>
+   <body>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+      <h1>Software Design Specification</h1>
+       <h2>For E-Commerce Website</h2>
+      
+      <!-- Section 0 starts here.-->
+      <div class="container">
+         <h3>0. Welcome to Software Design Specification</h3>
+         <button class="accordion">0.1 Group Number and Group Members </button>
+         <div class="panel">
+            <p>This is Group-1 and the group members name are given below with their id.</p>
+            <table class="table">
+              <tr>
+                <th>Name</th>
+                <th>ID</th>
+              </tr>
+              <tr>
+                <td>Polash Chakrabarty</td>
+                <td>1520579042</td>
+              </tr>
+              <tr>
+                <td>Tasmia Rahman Shahidi</td>
+                <td>1521367642</td>
+              </tr>
+              <tr>
+                <td>Safin Mahmud</td>
+                <td>1510903642</td>
+              </tr>
+              <tr>
+                <td>Jannatun Nur-E Rukshana</td>
+                <td>1511767642</td>
+              </tr>
+              <tr>
+                <td>Muntaha Kabir</td>
+                <td>1430243642</td>
+              </tr>
+              <tr>
+                <td>Syeda Anika Rehenuma</td>
+                <td>1120630042</td>
+              </tr>
+              <tr>
+                <td>Nazmus Shakib</td>
+                <td>1511336042</td>
+              </tr>
+            </table>
+         </div>
+         <button class="accordion">0.2 Table of Content </button>
+         <div class="panel">
+            <ol>
+              <li>Introduction</li>
+               <ul>
+                <li>1.1 Purpose</li>
+                <li>1.2 Document Conventions</li>
+                <li>1.3 Intended Audience and Reading Suggestions</li>
+                <li>1.4 Project Scope</li>
+                <li>1.5 References</li>
+                </ul>
+              <li>Architectural Design</li>
+                <ul>
+                <li>2.1 Approach</li>
+                <li>2.2 Diagram</li>
+                <li>2.3 Description</li>
+                </ul>
+              <li>Database design</li>
+               <ul>
+                <li>3.1 Approach</li>
+                <li>3.2 Diagram</li>
+                <li>3.3 Details of each table</li>
+                </ul>
+              <li>Component Design</li>
+               <ul>
+                <li>4.1 Class description</li>
+                <li>4.2 Class Diagram</li>
+                </ul>
+              <li>Interaction Design</li>
+               <ul>
+                <li>Sequence Diagram</li>
+                </ul>
+              <li>Risk Assessment</li>     
+            </ol>
+         </div>
+       </div>
+      <!-- Section 0 ends here.-->
+      <!-- Section 1 Introduction starts here.-->
+      <div class="container">
+         <h3>1. Introduction </h3>
+         <button class="accordion">1.1 Purpose </button>
+         <div class="panel">
+            <p>This document is meant to delineate the features of eCommerce website. The purpose of the document is to collect and analyze all assorted ideas that have come
+               up to define the system, its requirements with respect to consumers. In short, the purpose of
+               this SDS document is to provide a detailed overview of our eCommerce website, its parameters
+               and goals.It is intended to provide complete solutions for vendors as well as customers through a single get way using the internet. It will enable vendors to setup online shops,customer to browse through the shop and purchase them online without having to visit the shop physically. he
+               administration module will enable a system administrator to approve and maintain various lists of shop category.
+            </p>
+         </div>
+         <button class="accordion">1.2 Document Conventions </button>
+         <div class="panel">
+            <p>We use standard HTML for writing and creately.com for designing er-diagrams, uml-class diagram and sequence diagrams.</p>
+         </div>
+         <button class="accordion">1.3 Intended Audience and Reading Suggestions </button>
+         <div class="panel">
+            <p>We are making this document by keeping in mind different types of readers. This document will be useful for different audience in various ways.</p>
+            <table class="sec_3_table">
+               <tr>
+                  <th>Audience</th>
+                  <th>Use</th>
+               </tr>
+               <tr>
+                  <td>Developers</td>
+                  <td>They will use this documents for guidance for design and implemetation phase.</td>
+               </tr>
+               <tr>
+                  <td>Administrator</td>
+                  <td>They will see the constraints all cover properly.Time and cost is within limits or not.</td>
+               </tr>
+               <tr>
+                  <td>Marketing Staff</td>
+                  <td>They can use this document to make advertisements for this web store because by reading this document they will know what the system will do? How this system is different from others.</td>
+               </tr>
+               <tr>
+                  <td>Users</td>
+                  <td>They can ensure there self by reading the SRS that their needs being met in the webstore or not.</td>
+               </tr>
+               <tr>
+                  <td>Testers</td>
+                  <td>They will test the implementation of the project according to the SRS base.</td>
+               </tr>
+               <tr>
+                  <td>Documentatio Writer</td>
+                  <td>They will use this document during the documentation of the project. It will be reallyhelpful for them.</td>
+               </tr>
+            </table>
+         </div>
+         <button class="accordion">1.4 Project Scope </button>
+         <div class="panel">
+            <ol>
+               <li>We will provide the best functionality of most popular eCommerce website like Amazon, Alibaba etc.</li>
+               <li>Our online shopping site will be available 24 hours a day and 7 days in a week. There will be partially maintenance for once a week.</li>
+               <li>Our primary objective is to facilitate the customer. Through online shopping they will save a lot of time.</li>
+               <li>Different companies (especially new one) will get chance of cheap advertising.</li>
+               <li>Companies will no need to have extra stock. They can able to make products on demand.</li>
+               <li>We will guide user to buy good products through our online help system.</li>
+               <li>We will provide normal search, voice search and multi-voice search to make the shopping more convenient for our customer.</li>
+               <li>We will provide excellent security for user details especially for credit card numbers.</li>
+               <li>We will also provide different survey, reports that show different companies performance details.</li>
+               <li>We will manage customer accounts.</li>
+               <li>We will provide easy registration via Facebook or Gmail account.</li>
+               <li>We will maintain database for different users.</li>
+            </ol>
+         </div>
+         <button class="accordion">1.5 References: </button>
+         <div class="panel">
+            <p>https://docs.djangoproject.com/en/1.11</p>
+            <p>https://www.postgresql.org</p>
+            <p>https://creately.com</p>
+            <p>www.w3school.com</p>
+            <p>https://www.sublimetext.com</p>
+            <p>https://www.python.org</p>
+         </div>
+         <button class="accordion">Design Decisions: </button>
+         <div class="panel">
+            <p>At the beginning of the project we have faced the most common dilemma that everyone faces. The issue was whether to develop our project in Django framework(MVC) or any other framework. Some members were already familiar with Django and other members were familiar with laravel. We picked Django because majority has supported it. Then we discussed about other platforms and programming language. After some analysis, we have chosen postgresql for database design.We will also use Django Rest API to develope our andriod platform application.</p>
+         </div>
+      </div>
+      <!-- Section 1 Introduction ends here.-->
+      <!-- Section 2 Overall Description starts here.-->
+      <div class="container">
+         <h3>2. Architectural Design</h3>
+         <button class="accordion"> Approach</button>
+         <div class="panel">
+            <p>Model–view–controller (MVC) is an architectural pattern commonly used for developing user interfaces that divides an application into three interconnected parts. This is done to separate internal representations of information from the ways information is presented to and accepted from the user.</p>
+            <p>We are using django to develope our website.</p>
+            <p>
+               Django follows the MVC pattern closely enough to be called an MVC framework.
+
+              Django has been referred to as an MTV framework because the controller is handled by the framework itself and most of the excitement happens in models, templates and views. 
+
+              In Django’s interpretation of MVC, the view describes the data that gets presented to the user; it’s not necessarily just how the data looks, but which data is presented.
+
+            </p>
+            
+         </div>
+         <button class="accordion">Diagram</button>
+         <div class="panel">
+            <img src="image/Architectural_diagram.png" class="img-thumbnail" alt="Architectural-diagram">
+         </div>
+         <button class="accordion">Description</button>
+         <div class="panel">
+
+            <ul>
+               <li>• UI: It is placeholder for boundary classes.</li>
+               <li>• Controller: Controller classes are responsible for controlling the interaction between user and system.</li>
+               <li>• Product: It provides the information about all products available. Also allows searching them, manages product categories.</li>
+               <li>• Shopping cart manage: It allows the users to manipulate the contents of shopping cart and products and place products into them.</li>
+               <li>• User management: It tracks information about all types of users and their accounts. It will encapsulate the domain classes- Users, Customers, Employees, Admins, along with classes that will be used to manage various types of user accounts.</li>
+               <li>• Order manage: It performs order processing when user select product(s), add to cart and buys that/those product(s) which is/are in cart. This will also contain payment method and shipping system to  gather the information on the state of delivery.</li>
+
+            </ul>
+           
+         </div>
+         
+      </div>
+      <!-- Section 2 Overall Description ends here.-->
+      <!-- Section 3 Database design starts here.-->
+      <div class="container">
+         <h3>3. Database design</h3>
+         <button class="accordion"> Approach</button>
+         <div class="panel">
+            <p>There are two approaches for developing any database, the top-down method and the bottom-up method. We followed top-down approach to design our database.We modeled the objects at a logical level, then we applied the objects to a physical database design. For example, a relational database would need the objects to be mapped to tables.
+         </div>
+         <button class="accordion">Diagram(s)</button>
+         <div class="panel">
+            <img src="image/er_diagram.png" class="img-thumbnail" alt="er-diagram">
+         </div>
+         <button class="accordion">Description (if required)</button>
+         <div class="panel">
+            <p>NA</p>
+         </div>
+      </div>
+      <!-- Section 3 ends here.-->
+      
+            <!-- Section 4 starts here.-->
+      <div class="container">
+         <h3>4. Component Design </h3>
+         <button class="accordion">Class Discription</button>
+         <div class="panel">
+            <p>In this ecommerce system, people can shop or order product via online. The customer needs to create account in order to shop or order products. There is an admin class that can add product, update product, delete product and also control users. The details is shown in the class diagram.</p>
+         </div>
+         <button class="accordion">Class Diagram</button>
+         <div class="panel">
+            <img src="image/uml-class-diagram.png" class="img-thumbnail" alt="uml-class-diagram">
+         </div>
+      </div>
+      <!-- Section 4 System Features ends here.-->
+      <!-- Section 5  starts here.-->
+      <div class="container">
+         <h3>5. Interaction Design</h3>
+         <button class="accordion">Interaction 1(Registration)</button>
+         <div class="panel">
+            <img src="image/registration.png" class="img-thumbnail" alt="registration">
+         </div>
+         <button class="accordion">Interaction 2(login)</button>
+         <div class="panel">
+            <img src="image/login.jpg" class="img-thumbnail" alt="login">
+         </div>
+         <button class="accordion">Interaction 3(Search)</button>
+         <div class="panel">
+            <img src="image/search.png" class="img-thumbnail" alt="search">
+         </div>
+         <button class="accordion">Interaction 4(Shopping Cart)</button>
+         <div class="panel">
+            <img src="image/ShoppingCart.png" class="img-thumbnail" alt="ShoppingCart">
+         </div>
+         <button class="accordion">Interaction 5(Voice Search)</button>
+         <div class="panel">
+            <img src="image/voice-search.jpg" class="img-thumbnail" alt="voice-search">
+         </div>
+         <button class="accordion">Interaction 6(Shipping Product)</button>
+         <div class="panel">
+            <img src="image/shipping.jpg" class="img-thumbnail" alt="shipping">
+         </div>
+         <button class="accordion">Interaction 7(Place_Order)</button>
+         <div class="panel">
+            <img src="image/Place_Order.png" class="img-thumbnail" alt="Place_Order">
+         </div>
+         <button class="accordion">Interaction 8(AddItemsToCategory)</button>
+         <div class="panel">
+            <img src="image/AddItemsToCategory.png" class="img-thumbnail" alt="AddItemsToCategory">
+         </div>
+         <button class="accordion">Interaction 9(Cancel_Order)</button>
+         <div class="panel">
+            <img src="image/Cancel_Order.png" class="img-thumbnail" alt="Cancel_Order">
+         </div>
+       </div>
+         <!-- Section 5  ends here.-->
+         <!-- Section 6 starts here.-->
+         <div class="container">
+            <h3>6. Risk Assessment</h3>
+            <button class="accordion">Issues</button>
+            <div class="panel">
+               <ul style="list-style-type:disc">
+                  <li>Increased complexity</li>
+                  <li>Inefficiency of data access in view</li>
+                  <li>Difficulty of using MVC with modern user interface</li>
+                  <li>Need multiple programmers</li>
+                  <li>Knowledge on multiple technologies is required</li>
+                  <li>Knowledge on multiple technologies is required</li>
+               </ul>
+              
+
+            </div>
+         </div>
+         <!-- sec 6 ends here.-->
+
+      <script>
+         var acc = document.getElementsByClassName("accordion");
+         var i;
+         
+         for (i = 0; i < acc.length; i++) {
+           acc[i].addEventListener("click", function() {
+             this.classList.toggle("active");
+             var panel = this.nextElementSibling;
+             if (panel.style.maxHeight){
+               panel.style.maxHeight = null;
+               panel.style.border = null;
+             } else {
+               panel.style.maxHeight = panel.scrollHeight + 30 + "px";
+               panel.style.border = 2 + "px solid black";
+             } 
+           });
+         }
+      </script>
+
+      <script>
+         // When the user scrolls down 20px from the top of the document, show the button
+         window.onscroll = function() {scrollFunction()};
+
+         function scrollFunction() {
+             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                 document.getElementById("myBtn").style.display = "block";
+             } else {
+                 document.getElementById("myBtn").style.display = "none";
+             }
+         }
+
+         // When the user clicks on the button, scroll to the top of the document
+         function topFunction() {
+             document.body.scrollTop = 0;
+             document.documentElement.scrollTop = 0;
+         }
+      </script>
+
+
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS 
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+   </body>
+</html>
